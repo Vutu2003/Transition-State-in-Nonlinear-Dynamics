@@ -1,28 +1,22 @@
-# PROMPT 02 — CRITICAL AUDIT / NOVELTY CHECK
+# PROMPT 02 — CRITICAL AUDIT (Same Explore Output, v3)
 
-**Paper:** `paper/{{PAPER_FILE_NAME}}`
-**Exploration:** `explore_paper/{{PAPER_ID}}_explore.md`
-**Paper ID:** `{{PAPER_ID}}`
+Đọc **cả PDF gốc** `paper/{{PAPER_FILE}}` và `explore_paper/{{PAPER_ID}}_explore.md`. Đóng vai methodological reviewer phản biện độc lập. **Không tạo file audit riêng.** Mọi chỉnh sửa và audit phải nằm trong **cùng file Explore**.
 
-Đối chiếu bản exploration với **PDF gốc**, tập trung kiểm chứng các claims then chốt và xác định ranh giới thật sự của đóng góp khoa học. Không chỉ sửa văn phong; hãy phản biện như một reviewer cẩn trọng.
+## Audit checklist (ưu tiên methodological novelty)
+1. **Task identity:** Phương pháp thực sự nhận input gì và trả output gì? Nó là characterization, retrospective detection, parameter inference hay future prediction? Phải biết model equations, control parameter, state labels, intervention hoặc future observations không?
+2. **Novelty decomposition:** Thành phần nào borrowed/adapted/new? So với **các prior methods được paper dẫn**, authors' novelty claim cụ thể là gì? Novel formulation, estimator, objective, feature, architecture, validation protocol, application hay conceptual interpretation? Nếu không đủ bằng chứng để tuyên bố first-of-kind, nói rõ.
+3. **Mathematical validity:** Kiểm tra definitions, equations, assumptions, approximations, identifiability, statistical dependence và cách suy luận từ metric đến mechanism.
+4. **Evidence strength:** Claim nào dựa vào theorem, simulation, controlled experiment, real-world data hay interpretation? Đánh giá baselines, ablations, sample sizes, ground truth, calibration, sensitivity, uncertainty, statistical tests, out-of-sample/generalization. Phân biệt `not reported` và `failed`.
+5. **Claim–evidence mismatch:** Chỉ ra các khẳng định bị diễn giải quá mức (universality, robustness, causality, early warning, prediction lead time, identification of tipping mechanism, outperforming baseline...).
+6. **Reproducibility:** Các yếu tố còn thiếu (data access, code, parameter values, thresholds, time windows, seeds, train/test split, solver, fitting objective); independent reproduction có khả thi không?
+7. **Biomedical transferability:** Nếu áp dụng ECG/EEG/PPG, những assumptions/input cần thay đổi là gì? Đánh dấu là **hypothesis**, không tự tuyên bố literature gap hay clinical validity.
 
-Trả lời rõ các vấn đề:
-1. **Problem formulation / input contract:** Phương pháp thực sự nhận gì làm đầu vào? Một 1D time series hay nhiều recordings? Có cần known control parameter, labels, external interventions, governing model, assumptions về stationarity/bifurcation/transition type không?
-2. **Novelty decomposition:** Phần nào là existing methods, application to new system, new phenomenon/interpretation, new representation, new algorithm, new evaluation, hoặc new empirical evidence? Chỉ ra tiền lệ mà **chính paper dẫn**; không gọi một điều là “đầu tiên” nếu không có căn cứ.
-3. **Evidence-to-claim audit:** Mỗi main claim được hỗ trợ bởi figure/table/equation/experiment nào? Phân biệt observation, mechanism identification, retrospective detection, critical-point estimation, early warning và prospective prediction.
-4. **Reliability:** Có baselines, negative controls, ablation, surrogate/null testing, sensitivity, noise robustness, uncertainty, temporal/out-of-sample validation, false alarms, missed events hay không? Mục nào không có thì ghi “không báo cáo”.
-5. **Reproduction feasibility:** Cần dữ liệu, code, parameter values, thresholds, solvers, seeds, preprocessing và evaluation protocol gì? Thiếu gì?
-6. **Transferability:** Nếu chuyển sang EEG/ECG/PPG hoặc biomedical time series nói chung, assumptions nào có thể không còn đúng? Chỉ coi đây là *potential implication*, không tuyên bố research gap đã được chứng minh.
+## Chỉnh sửa file
+- Đối chiếu mọi nhận định quan trọng với PDF, dẫn page/section/equation/figure.
+- **Sửa trực tiếp** các lỗi trong phần Explore; không giữ lại kết luận sai chỉ vì đã viết trước đó.
+- Thay `## Critical Audit (chờ Prompt 02)` bằng `## Critical Audit` gồm 4 tiểu mục ngắn: `Verified strengths`, `Corrections / qualifications`, `Methodological limitations`, `Open questions`.
+- Cuối audit thêm **Novelty verdict** (1–3 câu), phân loại `New method / Methodological extension / New application or validation / Conceptual contribution / Unclear` (có thể chọn nhiều loại), với bằng chứng.
+- Bảo tồn các user notes nếu có; không tạo `*_audit.md` hay thay đổi output thư mục khác.
 
-**Đầu ra:** **Cập nhật trực tiếp** `explore_paper/{{PAPER_ID}}_explore.md` — không tạo file `_audit.md`. Giữ nguyên các phần exploration đúng; sửa trực tiếp những lỗi đã được đối chiếu với PDF, và ghi rõ những thay đổi quan trọng vào phần `## Critical Audit` ở cuối file. Phần audit gồm:
-- **Executive verdict** (5–8 câu).
-- **Claim–Evidence–Caveat table**: claim | bằng chứng chính xác trong PDF | giới hạn.
-- **Novelty classification** và các phương pháp đã tồn tại trước đó.
-- **Assumptions & input contract**.
-- **Unresolved questions / missing evidence**.
-- **Decision:** Reference only / Deep read / Reproduction candidate, kèm lý do.
-- **Corrections applied:** các nhận định cũ đã sửa và vị trí bằng chứng; ghi “Không có” nếu không cần sửa.
-
-Không lặp lại nguyên văn các phần đã phân tích. Audit phải làm giàu và kiểm tra bản Explore, không biến file thành hai bản tóm tắt riêng biệt.
-
-Quy tắc: Viết **tiếng Việt**, giữ English technical terms; đối chiếu PDF trực tiếp và gắn `[Sec./Fig./Eq./trang]` cho các claims quan trọng. Nếu phát hiện lỗi, sửa đúng vị trí trong exploration và ghi lại ở **Corrections applied** cùng trích dẫn. Không dùng web nếu không được yêu cầu; literature gap chỉ được ghi là giả thuyết cần systematic review.
+## Output
+Cập nhật **duy nhất** `explore_paper/{{PAPER_ID}}_explore.md`; báo những corrections quan trọng nhất và đường dẫn file. Viết bằng tiếng Việt, giữ technical terms tiếng Anh.

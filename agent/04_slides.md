@@ -1,24 +1,25 @@
-# PROMPT 04 — COMPACT RESEARCH SLIDES
+# PROMPT 04 — RESEARCH SLIDES (Methodology-Centered, v3)
 
-**Nguồn:** `paper/{{PAPER_FILE_NAME}}`, `explore_paper/{{PAPER_ID}}_explore.md` (bao gồm mục Critical Audit), `sumarize_paper/{{PAPER_ID}}_discussion.md`.
-**Paper ID:** `{{PAPER_ID}}`.
-**Thư mục thiết kế:** `template/`.
+Đọc `sumarize_paper/{{PAPER_ID}}_discussion.md`, `explore_paper/{{PAPER_ID}}_explore.md` và PDF `paper/{{PAPER_FILE}}`. Quan sát thư mục `template/` và **dùng presentation template thực có sẵn** nếu phù hợp; giữ layout, fonts/colors và style nhất quán. Nếu không có template hoặc không thể sử dụng, tạo slide tối giản, chuyên nghiệp và nói rõ fallback. **Không tự bịa figures, metrics, hoặc kết quả**.
 
-Hãy tạo **2–3 slides** trình bày paper cho một buổi research meeting. Đọc và sử dụng template trong `template/` nếu có; bảo toàn design system, tỷ lệ và slide master của template. Nếu có nhiều template hoặc không có file phù hợp, chọn mẫu tương thích nhất theo tên/mục đích, hoặc dùng thiết kế khoa học tối giản, nhất quán; ghi lựa chọn trong phần ghi chú kết quả.
+**Mục tiêu:** Tạo **2–3 slides** cho discussion với Prof, ít chữ, đủ để kể lại **Problem → methodological limitation → proposed change → evidence → novelty/limitations**. Nội dung tiếng Việt, giữ nguyên English technical terms. Ưu tiên correctness hơn hình thức.
 
-Storytelling ưu tiên:
-- **Slide 1 — Problem & Motivation:** Bài toán, đối tượng/dữ liệu, tại sao cần phương pháp.
-- **Slide 2 — Core Idea & Method:** Pipeline ngắn; 1 công thức hoặc 1 figure quan trọng nhất; nêu rõ assumptions quan trọng.
-- **Slide 3 — Results, Novelty & Limitations:** 1–2 main findings, chính xác novelty, một limitation quyết định và một câu hỏi mở cho biomedical signals.
+## Storyboard khuyến nghị
+- **Slide 1 — Problem & Methodological Motivation:** Problem, input–output và vì sao existing approach chưa đủ. Một visual/pipeline giản lược nếu hữu ích.
+- **Slide 2 — Proposed Method & Evidence:** Nêu rõ cái gì borrowed/cái gì new; workflow hoặc equation trọng tâm; 1 figure/bảng kết quả then chốt từ paper với nguồn `Fig./Table/Section` rõ ràng.
+- **Slide 3 — Novelty, Limitations & Research Implications:** 2–3 contributions có bằng chứng; 2 key limitations; 1 câu hỏi mở liên quan biomedical signals **được đánh dấu giả thuyết**.
 
-Quy tắc slide:
-- **Tiếng Việt**, giữ English technical terms; mỗi slide chỉ có **một thông điệp chính**, ít chữ, ưu tiên diagram/figure đúng nguồn.
-- Không được tự chế số liệu, tái vẽ figure gây hiểu sai, hoặc gắn figure của paper khác.
-- Nếu dùng hình từ PDF, chú thích `Nguồn: [Author et al., year], Fig. ...`; nếu không thể trích hợp lệ, dùng sơ đồ nguyên lý do bạn dựng và ghi “Minh họa khái niệm”.
-- Phân biệt detected/estimated critical point với prospective prediction; không tuyên bố method universal hoặc superior nếu không có benchmark.
-- Cỡ chữ đủ đọc khi thuyết trình; không đưa cả đoạn summary lên slides.
-- Speaker notes (nếu công cụ hỗ trợ): 2–4 câu nói tự nhiên cho mỗi slide, liên kết thành mạch 2–3 phút.
+Có thể chỉ dùng **2 slides** nếu paper thiên về reference/validation và không có đủ methodological novelty; không kéo giãn nội dung để đủ slide.
 
-**Đầu ra:** `slide/{{PAPER_ID}}_slides.pptx` (định dạng trình chiếu chỉnh sửa được). Nếu công cụ không thể xuất PPTX, tạo `slide/{{PAPER_ID}}_slides.md` dạng slide-by-slide và nêu rõ giới hạn; không giả vờ đã tạo PPTX.
+## Yêu cầu kỹ thuật/chất lượng
+- Mỗi slide có 1 headline dạng kết luận, tối đa ~3–4 short bullets, tránh paragraph dài, ưu tiên typography dễ đọc.
+- Figures trích từ paper phải chính xác, không vẽ lại làm thay đổi ý nghĩa; nếu không thể trích, tự tạo schematic được ghi rõ `Sơ đồ minh họa` và không giả lập dữ liệu.
+- Cần phân biệt retrospective detection, critical-point identification và prospective prediction.
+- Dùng journal/title/author/year ở footnote, và ghi nguồn figure ngay tại slide tương ứng.
+- Kiểm tra overflow, legibility, missing symbols/font, citations, slide order. Tạo file `.pptx` editable; nếu template không edit được, dùng alternative phù hợp.
+- Không chỉnh sửa Explore hoặc Research Discussion trong bước này; nếu phát hiện lỗi khoa học, báo riêng thay vì âm thầm chuyển lên slide.
 
-**Kiểm tra trước khi hoàn thành:** xem/render từng slide nếu môi trường cho phép để kiểm tra cắt chữ, tương phản, nguồn figure và sự nhất quán với research discussion. Không chỉnh sửa PDF gốc, exploration (bao gồm audit) hay summary trong bước này.
+## Output
+- Lưu **duy nhất** `slide/{{PAPER_ID}}_slides.pptx` (ngoại trừ file tạm cần thiết, xóa sau khi hoàn thành).
+- Nếu hệ thống hỗ trợ, render từng slide để kiểm tra visual quality trước khi bàn giao.
+- Trả lời đường dẫn PPTX, số slides và một câu mô tả mạch trình bày.

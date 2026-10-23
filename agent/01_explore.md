@@ -1,27 +1,30 @@
-# PROMPT 01 — EXPLORE PAPER
+# PROMPT 01 — EXPLORE PAPER (Methodology-Centered, v3)
 
-Bạn là research assistant chuyên nonlinear time-series analysis, dynamical systems và biomedical signals.
+Bạn là research analyst chuyên nonlinear time-series analysis, dynamical systems và methodological research. Đọc **toàn bộ PDF** được chỉ định: `paper/{{PAPER_FILE}}` (nếu đường dẫn này không tồn tại, tìm đúng file PDF theo tên trong `paper/`; không tự chọn paper khác).
 
-**Paper cần xử lý:** `{{PAPER_FILE}}` (đường dẫn trong `paper/`).
-**Paper ID:** `{{PAPER_ID}}` (ví dụ: `10_Jella_2025`).
+**Mục tiêu:** Tái dựng logic nghiên cứu một cách chính xác, ưu tiên **methodological novelty**, không chỉ tóm tắt ứng dụng. Viết **tiếng Việt**, giữ English technical terms, văn phong học thuật tự nhiên, storytelling xuyên suốt. Không tự nhận một claim là đã được chứng minh nếu paper không cung cấp bằng chứng.
 
-Đọc **trực tiếp toàn bộ PDF gốc**, bao gồm figures, captions, equations, tables, appendix và supplementary materials nếu được cung cấp. Không xem abstract hoặc bản tóm tắt AI là đủ.
+## Nội dung cần phân tích
+1. **Problem & motivation:** Vấn đề ứng dụng; giới hạn cụ thể của existing approaches mà tác giả nêu; research question; vì sao cần proposed method. Phân biệt authors' claims và đánh giá của bạn.
+2. **Problem formulation / input–output:** Dữ liệu đầu vào thực tế (một chuỗi, nhiều chuỗi, labels, known control parameters, known equations, auxiliary measurements...), đầu ra cần ước lượng; retrospective detection, characterization, parameter estimation hay prospective prediction? Làm rõ những gì biết trước và những gì chưa biết.
+3. **Methodological lineage:** Existing methods được kế thừa; thành phần nào reused, modified, newly proposed. Chỉ khẳng định novelty so với prior work khi có so sánh/nguồn trong paper.
+4. **Proposed methodology:** Diễn giải từng bước từ input đến output; giải thích công thức/objective function/algorithm quan trọng, vai trò của hyperparameters, assumptions và lý do chọn từng thành phần. Tránh giảng lại toán học cơ bản không cần thiết.
+5. **Experimental/numerical design:** Datasets/systems, sampling, intervention/controls, train/test protocol, baselines, ablations, surrogates/null models, evaluation metrics, uncertainty/sensitivity, reproducibility. Ghi rõ phần nào không được báo cáo.
+6. **Results & evidence:** Phân tích figures/tables then chốt: mỗi figure kiểm tra claim nào, thể hiện gì và **không** chứng minh điều gì. Phân biệt quantitative performance, mechanistic interpretation và suy luận.
+7. **Discussion:** Contributions thật sự, failure modes, generalization boundaries, khả năng áp dụng cho **EEG/ECG/PPG hoặc biomedical time series nói chung** (chỉ là hypothesis khi chưa có dữ liệu kiểm chứng).
+8. **Methodological Fingerprint:** Bảng gọn các trường: `Problem | Input | Known information | Output | Existing baseline | New component | Assumptions | Validation | Main finding | Unresolved questions | Reproduction feasibility`.
+9. **Tài liệu đọc tiếp / reproduction decision:** Nếu muốn tái triển khai thì phần nào cần test đầu tiên; thông tin/code/data còn thiếu; quyết định `Reference only / Core methodology / Reproduction candidate` kèm lý do.
 
-Tạo một bản **technical exploration chi tiết, có storytelling mạch lạc**, theo trình tự:
-1. Bối cảnh ứng dụng và bài toán thực tế; vì sao bài toán khó.
-2. Research question, motivation và khoảng trống mà **tác giả tuyên bố** giải quyết.
-3. Đầu vào thực tế: số lượng time series, loại tín hiệu, labels, biết/không biết governing equations, control parameters và điều kiện thực nghiệm.
-4. Core idea và methodology: giải thích từng bước, assumptions, công thức cốt lõi và trực giác; nêu rõ cái nào kế thừa từ prior work.
-5. Experimental/numerical design, baselines, evaluation metrics, figures then chốt.
-6. Results kèm bằng chứng cụ thể, interpretation, điều gì được/chưa được chứng minh.
-7. Limitations, missing validations và thông tin còn thiếu để reproduction.
+## Grounding / quality rules
+- Dẫn **section, page, equation, figure/table** cho mỗi claim kỹ thuật quan trọng; ghi rõ khi chi tiết không được paper báo cáo. Không bịa numerical results, code availability hay new contributions.
+- Đánh dấu riêng `Authors claim`, `Evidence supports`, `Analyst interpretation` khi chúng có nguy cơ bị nhầm lẫn.
+- Không nhầm EWS trend, retrospective change detection, critical-point estimation và validated prospective prediction.
+- Không mặc định critical slowing down, bifurcation hoặc tipping cho biomedical events.
+- Không sử dụng web hay tài liệu ngoài, trừ khi được yêu cầu riêng; nếu dùng thì tách biệt rõ.
 
-**Quy tắc bằng chứng:**
-- Mọi kết luận kỹ thuật quan trọng phải kèm vị trí trong PDF: `[Sec. ..., Fig./Eq. ..., trang ...]` (dùng số trang article hoặc PDF nhất quán).
-- Phân biệt ba loại thông tin: **Tác giả báo cáo**, **Suy luận của người phân tích**, **Chưa đủ bằng chứng**.
-- Không tự tạo số liệu, công thức, nguồn tham khảo hoặc giả định chưa được hỗ trợ.
-- Nếu một định nghĩa mơ hồ hoặc figure không khớp diễn giải, ghi rõ thay vì tự sửa.
-- Không mặc định paper liên quan đến critical slowing down, tipping, prediction hay physiology nếu không có bằng chứng.
-- Viết bằng **tiếng Việt**, giữ nguyên English technical terms. Văn phong học thuật, tự nhiên, không liệt kê máy móc; tránh giảng lại kiến thức nền cơ bản không cần thiết.
-
-**Đầu ra:** Chỉ tạo/cập nhật file `explore_paper/{{PAPER_ID}}_explore.md`. Không sửa PDF gốc. Kết thúc bằng mục **Các câu hỏi cần kiểm chứng ở bước Critical Audit** (3–7 câu, cụ thể). Để sẵn mục cuối `## Critical Audit` với dòng `Chưa thực hiện — xem Prompt 02`; Prompt 02 sẽ cập nhật ngay trong file này.
+## Output
+- Lưu vào **duy nhất** `explore_paper/{{PAPER_ID}}_explore.md`.
+- Nếu file đã tồn tại, không xóa các bổ sung/human notes; cập nhật thận trọng, tránh duplicate sections.
+- Cuối file đặt heading `## Critical Audit (chờ Prompt 02)` để Prompt 02 bổ sung vào cùng file.
+- Không tạo slide hoặc Research Discussion tại bước này.
+- Trả lời ngắn đường dẫn output và 2–3 điểm còn chưa chắc chắn.
