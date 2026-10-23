@@ -1,6 +1,6 @@
 # PROMPT 04 — COMPACT RESEARCH SLIDES
 
-**Nguồn:** `paper/{{PAPER_FILE_NAME}}`, `explore_paper/{{PAPER_ID}}_audit.md`, `sumarize_paper/{{PAPER_ID}}_discussion.md`.
+**Nguồn:** `paper/{{PAPER_FILE_NAME}}`, `explore_paper/{{PAPER_ID}}_explore.md` (bao gồm mục Critical Audit), `sumarize_paper/{{PAPER_ID}}_discussion.md`.
 **Paper ID:** `{{PAPER_ID}}`.
 **Thư mục thiết kế:** `template/`.
 
@@ -21,4 +21,4 @@ Quy tắc slide:
 
 **Đầu ra:** `slide/{{PAPER_ID}}_slides.pptx` (định dạng trình chiếu chỉnh sửa được). Nếu công cụ không thể xuất PPTX, tạo `slide/{{PAPER_ID}}_slides.md` dạng slide-by-slide và nêu rõ giới hạn; không giả vờ đã tạo PPTX.
 
-**Kiểm tra trước khi hoàn thành:** xem/render từng slide nếu môi trường cho phép để kiểm tra cắt chữ, tương phản, nguồn figure và sự nhất quán với research discussion. Không chỉnh sửa PDF gốc, exploration, audit hay summary trong bước này.
+**Kiểm tra trước khi hoàn thành:** xem/render từng slide nếu môi trường cho phép để kiểm tra cắt chữ, tương phản, nguồn figure và sự nhất quán với research discussion. Không chỉnh sửa PDF gốc, exploration (bao gồm audit) hay summary trong bước này.

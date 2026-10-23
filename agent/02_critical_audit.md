@@ -14,12 +14,15 @@ Trả lời rõ các vấn đề:
 5. **Reproduction feasibility:** Cần dữ liệu, code, parameter values, thresholds, solvers, seeds, preprocessing và evaluation protocol gì? Thiếu gì?
 6. **Transferability:** Nếu chuyển sang EEG/ECG/PPG hoặc biomedical time series nói chung, assumptions nào có thể không còn đúng? Chỉ coi đây là *potential implication*, không tuyên bố research gap đã được chứng minh.
 
-**Đầu ra:** `explore_paper/{{PAPER_ID}}_audit.md`, gồm:
+**Đầu ra:** **Cập nhật trực tiếp** `explore_paper/{{PAPER_ID}}_explore.md` — không tạo file `_audit.md`. Giữ nguyên các phần exploration đúng; sửa trực tiếp những lỗi đã được đối chiếu với PDF, và ghi rõ những thay đổi quan trọng vào phần `## Critical Audit` ở cuối file. Phần audit gồm:
 - **Executive verdict** (5–8 câu).
 - **Claim–Evidence–Caveat table**: claim | bằng chứng chính xác trong PDF | giới hạn.
-- **Novelty classification** và những phần đã tồn tại từ trước.
+- **Novelty classification** và các phương pháp đã tồn tại trước đó.
 - **Assumptions & input contract**.
 - **Unresolved questions / missing evidence**.
 - **Decision:** Reference only / Deep read / Reproduction candidate, kèm lý do.
+- **Corrections applied:** các nhận định cũ đã sửa và vị trí bằng chứng; ghi “Không có” nếu không cần sửa.
 
-Quy tắc: Viết **tiếng Việt**, giữ English technical terms; đối chiếu PDF trực tiếp và gắn `[Sec./Fig./Eq./trang]` cho các claims quan trọng. Không sửa exploration một cách im lặng; nếu phát hiện lỗi, ghi rõ **“Cần sửa trong exploration”** cùng trích dẫn và cách sửa đề xuất. Không dùng web nếu không được yêu cầu; literature gap chỉ được ghi là giả thuyết cần systematic review.
+Không lặp lại nguyên văn các phần đã phân tích. Audit phải làm giàu và kiểm tra bản Explore, không biến file thành hai bản tóm tắt riêng biệt.
+
+Quy tắc: Viết **tiếng Việt**, giữ English technical terms; đối chiếu PDF trực tiếp và gắn `[Sec./Fig./Eq./trang]` cho các claims quan trọng. Nếu phát hiện lỗi, sửa đúng vị trí trong exploration và ghi lại ở **Corrections applied** cùng trích dẫn. Không dùng web nếu không được yêu cầu; literature gap chỉ được ghi là giả thuyết cần systematic review.

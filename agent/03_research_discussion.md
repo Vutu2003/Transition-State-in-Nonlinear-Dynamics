@@ -1,6 +1,6 @@
 # PROMPT 03 — RESEARCH DISCUSSION SUMMARY
 
-**Nguồn:** `paper/{{PAPER_FILE_NAME}}`, `explore_paper/{{PAPER_ID}}_explore.md`, `explore_paper/{{PAPER_ID}}_audit.md`.
+**Nguồn:** `paper/{{PAPER_FILE_NAME}}`, `explore_paper/{{PAPER_ID}}_explore.md` (bao gồm mục Critical Audit).
 **Paper ID:** `{{PAPER_ID}}`.
 
 Từ các nguồn trên, viết một **Research Discussion** ngắn gọn, tự nhiên, có thể dùng để giải thích paper cho giáo sư trong khoảng **3–5 phút**. Ưu tiên PDF gốc nếu các nguồn mâu thuẫn; không biến suy luận của AI thành kết luận tác giả.

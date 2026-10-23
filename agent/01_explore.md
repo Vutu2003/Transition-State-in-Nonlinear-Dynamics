@@ -24,4 +24,4 @@ Tạo một bản **technical exploration chi tiết, có storytelling mạch l�
 - Không mặc định paper liên quan đến critical slowing down, tipping, prediction hay physiology nếu không có bằng chứng.
 - Viết bằng **tiếng Việt**, giữ nguyên English technical terms. Văn phong học thuật, tự nhiên, không liệt kê máy móc; tránh giảng lại kiến thức nền cơ bản không cần thiết.
 
-**Đầu ra:** Chỉ tạo/cập nhật file `explore_paper/{{PAPER_ID}}_explore.md`. Không sửa PDF gốc. Kết thúc bằng mục **Các câu hỏi cần kiểm chứng ở bước Critical Audit** (3–7 câu, cụ thể).
+**Đầu ra:** Chỉ tạo/cập nhật file `explore_paper/{{PAPER_ID}}_explore.md`. Không sửa PDF gốc. Kết thúc bằng mục **Các câu hỏi cần kiểm chứng ở bước Critical Audit** (3–7 câu, cụ thể). Để sẵn mục cuối `## Critical Audit` với dòng `Chưa thực hiện — xem Prompt 02`; Prompt 02 sẽ cập nhật ngay trong file này.
