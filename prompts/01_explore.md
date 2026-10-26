@@ -134,6 +134,8 @@ Không cần tạo thêm PDF hoặc ảnh làm đầu ra. Có thể dùng tệp 
 
 - Chỉ lưu một file: **explore_paper/{{PAPER_ID}}_explore.md**.
 - Nếu file đã có, giữ các bổ sung và ghi chú của người dùng; cập nhật thận trọng, tránh lặp mục.
-- Cuối file giữ đúng heading **## Critical Audit (chờ Prompt 02)** để bước sau bổ sung vào cùng file. Trong lời dẫn có thể giải thích đây là phần kiểm định phản biện; không tự thực hiện toàn bộ Prompt 02 tại bước này.
+
+
+
 - Không tạo slide hoặc bản thảo thảo luận nghiên cứu tại bước này.
 - Trả lời ngắn bằng tiếng Việt: link file, xác nhận chuẩn ngôn ngữ/công thức đã kiểm tra, và 2–3 điểm còn chưa chắc chắn từ bài báo.

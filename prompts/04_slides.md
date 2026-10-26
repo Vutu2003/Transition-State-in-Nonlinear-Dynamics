@@ -47,7 +47,7 @@ Có thể dựng một PowerPoint editable làm file trung gian để thiết k�
 
 Yêu cầu:
 
-- Số lượng: **7–10 slides, mặc định 9; tuyệt đối không vượt quá 10**.
+- Số lượng: **7–15 slides, số lượng do bạn quyết định để hợp lý và trình bày tốt nghiên cứu (nhưng không vượt quá 15 slides)**.
 - Ngôn ngữ: Tiếng Việt, giữ nguyên English technical terms.
 - Font chữ: **Times New Roman** cho toàn bộ text, header và equations được dựng. Giữ nguyên font gốc trong figures trích từ paper và logo template.
 - Tỷ lệ: 16:9, trừ khi template yêu cầu khác.
