@@ -24,14 +24,14 @@ Các đại lượng như số mũ Lyapunov, chiều fractal và entropy đã đ
 
 Một phép tính độ phức tạp dùng **một chuỗi cực trị biên độ tại một giá trị tham số cố định**. Để tái tạo kết quả chính của bài, cần **nhiều chuỗi**, mỗi chuỗi gắn với giá trị tham số điều khiển đã biết; sau đó so sánh đường độ phức tạp với biểu đồ phân nhánh và ngưỡng cực đoan. Không có tập nhãn lâm sàng hoặc dữ liệu huấn luyện cho một mô hình học máy. [Mục II–III, tr. 3; Hình 1, 3, 5]
 
-| Thành phần | Nội dung trong bài |
-| --- | --- |
-| Tín hiệu quan sát | Biến y của hệ Liénard; biến y của ánh xạ Ikeda; tổng hai biến x của hệ Hindmarsh–Rose |
-| Chuỗi đưa vào thống kê | Cực đại địa phương của y trong Liénard; cực tiểu địa phương của y trong Ikeda; cực đại địa phương của tổng hai biến x trong hệ Hindmarsh–Rose |
-| Thông tin biết trước để kiểm chứng | Phương trình mô hình, các tham số cố định, tham số đang quét và các cơ chế chuyển tiếp mà tác giả dẫn từ nghiên cứu trước |
-| Lựa chọn phân tích | Số khoảng chia biên độ m; hướng cực trị; ngưỡng tham chiếu để đánh dấu biến cố cực đoan |
-| Đầu ra tại một điều kiện | Entropy Shannon chuẩn hóa S, độ lệch khỏi phân bố đều D và độ phức tạp C |
-| Đầu ra khi quét tham số | Đường S, D, C theo tham số; nhận diện trực quan sự thay đổi chế độ và vị trí khởi phát tương ứng với biểu đồ phân nhánh |
+| Thành phần                               | Nội dung trong bài                                                                                                                                                      |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tín hiệu quan sát                       | Biến y của hệ Liénard; biến y của ánh xạ Ikeda; tổng hai biến x của hệ Hindmarsh–Rose                                                                        |
+| Chuỗi đưa vào thống kê               | Cực đại địa phương của y trong Liénard; cực tiểu địa phương của y trong Ikeda; cực đại địa phương của tổng hai biến x trong hệ Hindmarsh–Rose |
+| Thông tin biết trước để kiểm chứng | Phương trình mô hình, các tham số cố định, tham số đang quét và các cơ chế chuyển tiếp mà tác giả dẫn từ nghiên cứu trước                     |
+| Lựa chọn phân tích                     | Số khoảng chia biên độ m; hướng cực trị; ngưỡng tham chiếu để đánh dấu biến cố cực đoan                                                              |
+| Đầu ra tại một điều kiện            | Entropy Shannon chuẩn hóa S, độ lệch khỏi phân bố đều D và độ phức tạp C                                                                                   |
+| Đầu ra khi quét tham số                | Đường S, D, C theo tham số; nhận diện trực quan sự thay đổi chế độ và vị trí khởi phát tương ứng với biểu đồ phân nhánh                        |
 
 Nguồn: Mục II–III.C, tr. 3–6; Phương trình (1)–(10); Hình 1–5. Mặc dù phần mở đầu Mục III nói chung về cực đại, ví dụ Ikeda thực tế sử dụng cực tiểu; lựa chọn đó phải được giữ khi tái lập.
 
@@ -48,14 +48,14 @@ Phân biệt trên dựa vào quy trình quét tham số ở Mục I–III, tr. 
 
 ## 3. Nguồn gốc phương pháp và đóng góp có thể xác định
 
-| Thành phần | Nguồn được chính bài báo dẫn | Vai trò và phạm vi tính mới |
-| --- | --- | --- |
-| Entropy Shannon | Shannon, tài liệu 32 và 37; Mục II | Công cụ kế thừa để đo mức phân tán xác suất |
-| Chuẩn hóa theo entropy của phân bố đều | Phương trình (1); Phụ lục A | Đưa entropy về thang chuẩn hóa theo số khoảng chia; bài không chứng minh đây là phép chuẩn hóa mới |
-| Độ lệch khỏi phân bố đều bằng tổng bình phương sai khác | Tài liệu 46, 59, 60; Phương trình (2) | Công cụ kế thừa; tác giả gọi là khoảng cách Euclid, còn biểu thức sử dụng bình phương khoảng cách, không lấy căn |
-| Tích entropy và độ lệch khỏi phân bố đều | Lopez-Ruiz, Mancini và Calbet, tài liệu 46; Phương trình (3) | Có tiền lệ được dẫn ngay khi định nghĩa; không thể coi phép nhân hai đại lượng là phát minh của bài |
-| Giữ thông tin biên độ bằng phân bố của toàn bộ cực trị | Mục I–II; Phụ lục A | Lựa chọn biểu diễn được nhấn mạnh cho bài toán biến cố lớn hiếm gặp |
-| Quét tham số và diễn giải dạng tăng–đạt đỉnh–giảm | Mục III–IV; Hình 1–6 | Đóng góp chính của công trình: khảo sát và diễn giải chỉ số kế thừa trong ba mô hình có biến cố cực đoan |
+| Thành phần                                                          | Nguồn được chính bài báo dẫn                               | Vai trò và phạm vi tính mới                                                                                                        |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Entropy Shannon                                                       | Shannon, tài liệu 32 và 37; Mục II                             | Công cụ kế thừa để đo mức phân tán xác suất                                                                                 |
+| Chuẩn hóa theo entropy của phân bố đều                         | Phương trình (1); Phụ lục A                                   | Đưa entropy về thang chuẩn hóa theo số khoảng chia; bài không chứng minh đây là phép chuẩn hóa mới                     |
+| Độ lệch khỏi phân bố đều bằng tổng bình phương sai khác | Tài liệu 46, 59, 60; Phương trình (2)                         | Công cụ kế thừa; tác giả gọi là khoảng cách Euclid, còn biểu thức sử dụng bình phương khoảng cách, không lấy căn |
+| Tích entropy và độ lệch khỏi phân bố đều                    | Lopez-Ruiz, Mancini và Calbet, tài liệu 46; Phương trình (3) | Có tiền lệ được dẫn ngay khi định nghĩa; không thể coi phép nhân hai đại lượng là phát minh của bài               |
+| Giữ thông tin biên độ bằng phân bố của toàn bộ cực trị   | Mục I–II; Phụ lục A                                            | Lựa chọn biểu diễn được nhấn mạnh cho bài toán biến cố lớn hiếm gặp                                                     |
+| Quét tham số và diễn giải dạng tăng–đạt đỉnh–giảm       | Mục III–IV; Hình 1–6                                           | Đóng góp chính của công trình: khảo sát và diễn giải chỉ số kế thừa trong ba mô hình có biến cố cực đoan         |
 
 Nguồn: Mục I–II, tr. 2–3; Mục IV, tr. 7; danh mục tài liệu 32, 37, 46, 59–60, tr. 9. Các tài liệu này chỉ được nhận diện từ PDF hiện tại, chưa được đọc độc lập.
 
@@ -215,19 +215,19 @@ Bài lấy cực đại địa phương của tổng này và quét ε. Sự xu�
 
 Can thiệp chính là thay đổi một tham số điều khiển trong từng mô hình; những chế độ trước chuyển tiếp và chế độ có biến cố lớn thường xuyên hơn đóng vai trò đối chiếu nội tại. Việc có ba mô hình và hai cơ chế giúp kiểm tra tính lặp lại về định tính. Đây không phải nghiên cứu can thiệp trên hệ sinh học thực hoặc đánh giá dự báo trên tập kiểm tra. [Mục III.A–C, tr. 3–7]
 
-| Nội dung thiết kế | Điều PDF cung cấp | Giới hạn cần giữ khi diễn giải |
-| --- | --- | --- |
-| Phương trình và tham số | Ba mô hình, tham số cố định và đại lượng quan sát; các giá trị minh họa trên hình | Có bất nhất dấu ε trong hệ Hindmarsh–Rose |
-| Cách lấy mẫu và thời lượng | Một số đoạn chuỗi được vẽ với trục thời gian hoặc số vòng lặp | Không báo cáo đầy đủ bước tích phân, phương pháp và dung sai tích phân, chu kỳ lấy mẫu, số mẫu hoặc số cực trị dùng cho mỗi điểm C |
-| Điều kiện đầu và quá độ | Mô tả chuỗi được sinh bằng mô phỏng và cần đủ dài | Không cho đầy đủ điều kiện đầu, thời gian loại quá độ, quy tắc chọn nhánh hay cách nối tiếp điều kiện đầu giữa các giá trị tham số |
-| Lưới tham số | Các miền quét và mốc chuyển tiếp điển hình | Không báo cáo đầy đủ bước quét và quy tắc chọn mốc; số chữ số được in không thay cho sai số ước lượng |
-| So sánh từng thành phần | Hình 1 vẽ riêng S, D và tích C | Có giá trị như kiểm tra vai trò kết hợp; chưa phải đánh giá hiệu năng có cùng tiêu chí quyết định cho nhiều phương pháp |
-| Phương án đối chiếu ngoài | Thảo luận PE và các cách đo độ phức tạp trước đây | Không báo cáo PE, độ phân kỳ Jensen–Shannon hay phương pháp cảnh báo sớm trên cùng các chuỗi |
-| Độ nhạy số khoảng chia | m = 25, 50, 75, 100 trong Hình 6 | Có kiểm tra này; chưa kiểm tra hệ thống độ dài chuỗi, nhiễu, cách phát hiện cực trị hoặc biên chia khoảng cố định so với biên theo từng chuỗi |
-| Chia dữ liệu | Không huấn luyện mô hình; không báo cáo chia huấn luyện/kiểm tra | Không thể suy ra kết quả ngoài mẫu hoặc khả năng khái quát của bộ phân loại |
-| Tín hiệu thay thế và đối chứng âm | Không báo cáo phép thử với chuỗi thay thế, nhiễu ngẫu nhiên có phân bố phù hợp hoặc hoán vị dãy cực trị | Chưa xác định tính đặc hiệu của C đối với cơ chế động lực học của biến cố cực đoan |
-| Độ bất định | Trình bày đường chỉ số, biểu đồ phân nhánh và phân bố biên độ | Không báo cáo số lần chạy độc lập, thanh sai số, khoảng tin cậy hoặc kiểm định thống kê của mức tăng C |
-| Dữ liệu và mã | Dữ liệu được cung cấp từ tác giả liên hệ khi có yêu cầu hợp lý | PDF không nêu kho dữ liệu hoặc kho mã công khai; không đủ căn cứ kết luận chúng không tồn tại ở nơi khác |
+| Nội dung thiết kế                      | Điều PDF cung cấp                                                                                                          | Giới hạn cần giữ khi diễn giải                                                                                                                                     |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Phương trình và tham số              | Ba mô hình, tham số cố định và đại lượng quan sát; các giá trị minh họa trên hình                           | Có bất nhất dấu ε trong hệ Hindmarsh–Rose                                                                                                                         |
+| Cách lấy mẫu và thời lượng         | Một số đoạn chuỗi được vẽ với trục thời gian hoặc số vòng lặp                                                 | Không báo cáo đầy đủ bước tích phân, phương pháp và dung sai tích phân, chu kỳ lấy mẫu, số mẫu hoặc số cực trị dùng cho mỗi điểm C         |
+| Điều kiện đầu và quá độ          | Mô tả chuỗi được sinh bằng mô phỏng và cần đủ dài                                                               | Không cho đầy đủ điều kiện đầu, thời gian loại quá độ, quy tắc chọn nhánh hay cách nối tiếp điều kiện đầu giữa các giá trị tham số        |
+| Lưới tham số                           | Các miền quét và mốc chuyển tiếp điển hình                                                                          | Không báo cáo đầy đủ bước quét và quy tắc chọn mốc; số chữ số được in không thay cho sai số ước lượng                                          |
+| So sánh từng thành phần               | Hình 1 vẽ riêng S, D và tích C                                                                                           | Có giá trị như kiểm tra vai trò kết hợp; chưa phải đánh giá hiệu năng có cùng tiêu chí quyết định cho nhiều phương pháp                        |
+| Phương án đối chiếu ngoài          | Thảo luận PE và các cách đo độ phức tạp trước đây                                                               | Không báo cáo PE, độ phân kỳ Jensen–Shannon hay phương pháp cảnh báo sớm trên cùng các chuỗi                                                           |
+| Độ nhạy số khoảng chia               | m = 25, 50, 75, 100 trong Hình 6                                                                                             | Có kiểm tra này; chưa kiểm tra hệ thống độ dài chuỗi, nhiễu, cách phát hiện cực trị hoặc biên chia khoảng cố định so với biên theo từng chuỗi |
+| Chia dữ liệu                            | Không huấn luyện mô hình; không báo cáo chia huấn luyện/kiểm tra                                                   | Không thể suy ra kết quả ngoài mẫu hoặc khả năng khái quát của bộ phân loại                                                                               |
+| Tín hiệu thay thế và đối chứng âm | Không báo cáo phép thử với chuỗi thay thế, nhiễu ngẫu nhiên có phân bố phù hợp hoặc hoán vị dãy cực trị | Chưa xác định tính đặc hiệu của C đối với cơ chế động lực học của biến cố cực đoan                                                                |
+| Độ bất định                          | Trình bày đường chỉ số, biểu đồ phân nhánh và phân bố biên độ                                               | Không báo cáo số lần chạy độc lập, thanh sai số, khoảng tin cậy hoặc kiểm định thống kê của mức tăng C                                              |
+| Dữ liệu và mã                         | Dữ liệu được cung cấp từ tác giả liên hệ khi có yêu cầu hợp lý                                                | PDF không nêu kho dữ liệu hoặc kho mã công khai; không đủ căn cứ kết luận chúng không tồn tại ở nơi khác                                            |
 
 Nguồn: Mục II–III, tr. 3–7; Hình 1–6; Phụ lục B, tr. 8; phần khả dụng dữ liệu, tr. 7. Các chi tiết “không báo cáo” trong bảng là phạm vi của PDF đã đọc. Độ dài đoạn vẽ trên hình không được dùng thay cho độ dài chuỗi thực sự đưa vào thống kê.
 
@@ -303,19 +303,19 @@ Nếu mục tiêu là dự báo, cần một thiết kế mới chỉ dùng dữ
 
 ## 8. Hồ sơ phương pháp (Methodological Fingerprint)
 
-| Trường | Hồ sơ của nghiên cứu |
-| --- | --- |
-| **Bài toán (Problem)** | Đặc trưng và phân biệt chế độ hỗn loạn có biến cố biên độ lớn hiếm gặp với hỗn loạn không cực đoan; khảo sát chuyển tiếp giữa chúng. [Mục I] |
-| **Đầu vào (Input)** | Một dãy biên độ cực đại hoặc cực tiểu cho mỗi điều kiện; nhiều dãy có tham số đi kèm để dựng đường chuyển tiếp. [Mục II–III] |
-| **Thông tin biết trước (Known information)** | Chọn biến quan sát, hướng cực trị và số khoảng chia; trong kiểm chứng còn biết phương trình, tham số điều khiển và mốc/chế độ từ biểu đồ phân nhánh. Ngưỡng T dùng để đối chiếu, không để tính C. [Mục III] |
-| **Đầu ra (Output)** | S, D, C tại từng điều kiện; đường C theo tham số và sự tương ứng trực quan với khởi phát, miền biến cố hiếm và biến cố lớn thường xuyên. [Phương trình (1)–(3); Hình 1, 3, 5] |
-| **Phương án đối chiếu (Existing baseline)** | S và D riêng lẻ trong Hình 1; biểu đồ phân nhánh, chuỗi và phân bố biên độ làm tham chiếu. PE được thảo luận nhưng không chạy so sánh trực tiếp. [Mục I; Hình 1–5] |
-| **Thành phần mới (New component)** | Khảo sát chỉ số tích entropy–độ lệch đã có trên phân bố biên độ cực trị để mô tả biến cố cực đoan; diễn giải xu hướng qua ba mô hình và hai cơ chế. Không phải phát minh tích S và D. [Mục II–IV; tài liệu 46] |
-| **Giả định (Assumptions)** | Chuỗi tại mỗi tham số đại diện đủ tốt cho chế độ; lấy đủ cực trị để quan sát biến cố hiếm; trích cực trị và chia khoảng nhất quán; biến quan sát phản ánh hiện tượng cần khảo sát. Đây là các điều kiện ngầm của quy trình, không phải giả định đã được kiểm chứng đầy đủ. [Mục II–III] |
-| **Kiểm chứng (Validation)** | Liénard với PM và khủng hoảng nội tại; Ikeda và hai nơron Hindmarsh–Rose với khủng hoảng nội tại; thay m qua bốn giá trị. Không có kiểm chứng ngoài mẫu hoặc trên dữ liệu thực. [Hình 1–6] |
-| **Kết quả chính (Main finding)** | C tăng trong miền khởi phát, đạt cực đại hoặc miền cao rồi giảm khi biến cố lớn thường xuyên hơn; mốc thay đổi định tính giữ tương tự khi đổi m trong phạm vi thử. [Mục III–IV; Hình 1, 3, 5–6] |
-| **Câu hỏi còn mở (Unresolved questions)** | Tính đặc hiệu của C; độ nhạy với độ dài chuỗi, nhiễu và biên khoảng; quy tắc chọn điểm chuyển tiếp; dấu ε; cách tính μ, σ và hệ số ngưỡng trong hệ ghép; giá trị cho dự báo trước biến cố. [Các thông tin thiếu ở Mục III và Phụ lục B] |
-| **Khả năng tái lập (Reproduction feasibility)** | Có thể cài đặt chỉ số và phương trình từ PDF; tái lập xu hướng khả thi hơn tái lập chính xác hình. Cần bổ sung cấu hình số, dữ liệu/mã và làm rõ bất nhất dấu ghép. Chưa thực hiện mô phỏng tái lập trong bước này. [Mục II–III; khả dụng dữ liệu, tr. 7] |
+| Trường                                                  | Hồ sơ của nghiên cứu                                                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Bài toán (Problem)**                            | Đặc trưng và phân biệt chế độ hỗn loạn có biến cố biên độ lớn hiếm gặp với hỗn loạn không cực đoan; khảo sát chuyển tiếp giữa chúng. [Mục I]                                                                                                                                                                                |
+| **Đầu vào (Input)**                              | Một dãy biên độ cực đại hoặc cực tiểu cho mỗi điều kiện; nhiều dãy có tham số đi kèm để dựng đường chuyển tiếp. [Mục II–III]                                                                                                                                                                                                  |
+| **Thông tin biết trước (Known information)**    | Chọn biến quan sát, hướng cực trị và số khoảng chia; trong kiểm chứng còn biết phương trình, tham số điều khiển và mốc/chế độ từ biểu đồ phân nhánh. Ngưỡng T dùng để đối chiếu, không để tính C. [Mục III]                                                                                                     |
+| **Đầu ra (Output)**                               | S, D, C tại từng điều kiện; đường C theo tham số và sự tương ứng trực quan với khởi phát, miền biến cố hiếm và biến cố lớn thường xuyên. [Phương trình (1)–(3); Hình 1, 3, 5]                                                                                                                                              |
+| **Phương án đối chiếu (Existing baseline)**   | S và D riêng lẻ trong Hình 1; biểu đồ phân nhánh, chuỗi và phân bố biên độ làm tham chiếu. PE được thảo luận nhưng không chạy so sánh trực tiếp. [Mục I; Hình 1–5]                                                                                                                                                           |
+| **Thành phần mới (New component)**               | Khảo sát chỉ số tích entropy–độ lệch đã có trên phân bố biên độ cực trị để mô tả biến cố cực đoan; diễn giải xu hướng qua ba mô hình và hai cơ chế. Không phải phát minh tích S và D. [Mục II–IV; tài liệu 46]                                                                                                 |
+| **Giả định (Assumptions)**                       | Chuỗi tại mỗi tham số đại diện đủ tốt cho chế độ; lấy đủ cực trị để quan sát biến cố hiếm; trích cực trị và chia khoảng nhất quán; biến quan sát phản ánh hiện tượng cần khảo sát. Đây là các điều kiện ngầm của quy trình, không phải giả định đã được kiểm chứng đầy đủ. [Mục II–III] |
+| **Kiểm chứng (Validation)**                       | Liénard với PM và khủng hoảng nội tại; Ikeda và hai nơron Hindmarsh–Rose với khủng hoảng nội tại; thay m qua bốn giá trị. Không có kiểm chứng ngoài mẫu hoặc trên dữ liệu thực. [Hình 1–6]                                                                                                                                    |
+| **Kết quả chính (Main finding)**                 | C tăng trong miền khởi phát, đạt cực đại hoặc miền cao rồi giảm khi biến cố lớn thường xuyên hơn; mốc thay đổi định tính giữ tương tự khi đổi m trong phạm vi thử. [Mục III–IV; Hình 1, 3, 5–6]                                                                                                                        |
+| **Câu hỏi còn mở (Unresolved questions)**       | Tính đặc hiệu của C; độ nhạy với độ dài chuỗi, nhiễu và biên khoảng; quy tắc chọn điểm chuyển tiếp; dấu ε; cách tính μ, σ và hệ số ngưỡng trong hệ ghép; giá trị cho dự báo trước biến cố. [Các thông tin thiếu ở Mục III và Phụ lục B]                                                                  |
+| **Khả năng tái lập (Reproduction feasibility)** | Có thể cài đặt chỉ số và phương trình từ PDF; tái lập xu hướng khả thi hơn tái lập chính xác hình. Cần bổ sung cấu hình số, dữ liệu/mã và làm rõ bất nhất dấu ghép. Chưa thực hiện mô phỏng tái lập trong bước này. [Mục II–III; khả dụng dữ liệu, tr. 7]                                              |
 
 ## 9. Tài liệu đọc tiếp và quyết định tái lập
 
@@ -325,15 +325,15 @@ Trước tiên cần đọc lại **Mục II, tr. 3**, **Phụ lục A–B, tr. 
 
 Những tài liệu dưới đây là **đề xuất đọc tiếp từ danh mục của bài**, chưa được truy cập trong phân tích này. PDF không in tên của phần lớn các tài liệu tham khảo; vì vậy chỉ ghi thông tin thư mục được cung cấp cùng mục đích đọc, không tự đặt nhan đề:
 
-| Tài liệu được bài dẫn | Mục đích đọc tiếp |
-| --- | --- |
-| Lopez-Ruiz, Mancini và Calbet (1995), *Phys. Lett. A* **209**, 321, tài liệu 46 | Xác định nguồn gốc của cách kết hợp entropy và độ lệch khỏi phân bố đều, cũng như các lựa chọn chuẩn hóa |
-| Bandt và Pompe (2002), *Phys. Rev. Lett.* **88**, 174102, tài liệu 44 | Kiểm tra biểu diễn thứ tự của PE và phạm vi thực sự của nhận định “mất thông tin biên độ” |
-| Xiong, Shang, He và Zhang (2020), *Nonlinear Dyn.* **100**, 1673, tài liệu 51 | Kiểm tra phép kết hợp PE và độ phân kỳ Jensen–Shannon mà bài dùng làm đối chiếu trong tổng quan |
-| Manneville và Pomeau (1980), *Physica D* **1**, 219, tài liệu 52; Grebogi và cộng sự (1987), *Phys. Rev. A* **36**, 5365, tài liệu 53 | Làm rõ cơ chế gián đoạn và khủng hoảng, tránh suy cơ chế chỉ từ bước nhảy của C |
-| Kingston và cộng sự (2017), *Phys. Rev. E* **96**, 052204, tài liệu 54 | Tìm đặc tả và kiểm chứng cơ chế của hệ Liénard được bài kế thừa |
-| Ray, Rakshit, Ghosh và Dana (2019), *Chaos* **29**, 043131, tài liệu 55 | Kiểm tra nguồn mô hình Ikeda, tham số và quy trình sinh biến cố cực đoan |
-| Mishra và cộng sự (2018), *Phys. Rev. E* **97**, 062311, tài liệu 57 | Kiểm tra quy ước dấu ghép và cơ chế bùng phát của hệ Hindmarsh–Rose |
+| Tài liệu được bài dẫn                                                                                                                                  | Mục đích đọc tiếp                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Lopez-Ruiz, Mancini và Calbet (1995), *Phys. Lett. A* **209**, 321, tài liệu 46                                                                    | Xác định nguồn gốc của cách kết hợp entropy và độ lệch khỏi phân bố đều, cũng như các lựa chọn chuẩn hóa |
+| Bandt và Pompe (2002), *Phys. Rev. Lett.* **88**, 174102, tài liệu 44                                                                              | Kiểm tra biểu diễn thứ tự của PE và phạm vi thực sự của nhận định “mất thông tin biên độ”                    |
+| Xiong, Shang, He và Zhang (2020), *Nonlinear Dyn.* **100**, 1673, tài liệu 51                                                                      | Kiểm tra phép kết hợp PE và độ phân kỳ Jensen–Shannon mà bài dùng làm đối chiếu trong tổng quan                 |
+| Manneville và Pomeau (1980), *Physica D* **1**, 219, tài liệu 52; Grebogi và cộng sự (1987), *Phys. Rev. A* **36**, 5365, tài liệu 53 | Làm rõ cơ chế gián đoạn và khủng hoảng, tránh suy cơ chế chỉ từ bước nhảy của C                                |
+| Kingston và cộng sự (2017), *Phys. Rev. E* **96**, 052204, tài liệu 54                                                                           | Tìm đặc tả và kiểm chứng cơ chế của hệ Liénard được bài kế thừa                                                 |
+| Ray, Rakshit, Ghosh và Dana (2019), *Chaos* **29**, 043131, tài liệu 55                                                                            | Kiểm tra nguồn mô hình Ikeda, tham số và quy trình sinh biến cố cực đoan                                               |
+| Mishra và cộng sự (2018), *Phys. Rev. E* **97**, 062311, tài liệu 57                                                                             | Kiểm tra quy ước dấu ghép và cơ chế bùng phát của hệ Hindmarsh–Rose                                                  |
 
 Nguồn thông tin thư mục: danh mục tài liệu, tr. 9. Các chủ đề trong cột phải là lý do đọc, không phải bản tóm tắt những tài liệu đã được đọc.
 

@@ -22,14 +22,14 @@ Trong hệ nhiệt âm, tương tác giữa trường âm và tốc độ giải
 
 Đầu vào của toàn bộ quy trình thực nghiệm là **nhiều chuỗi áp suất một chiều, mỗi chuỗi gắn với một số Reynolds đã biết**. Một chuỗi tại một điều kiện đủ để dựng biểu diễn tái diễn, nhưng bước ước lượng điểm tới hạn cần so sánh nhiều điều kiện và cần giá trị của đại lượng tại chính điểm ứng viên. Vì vậy, “chỉ cần một đại lượng quan sát” không có nghĩa “chỉ cần một chuỗi duy nhất và không cần biết tham số điều khiển”. [Mục II.A, II.C, tr. 3–4; Mục III.B, tr. 8–10]
 
-| Thành phần | Thí nghiệm buồng đốt | Kiểm chứng bằng mô hình |
-| --- | --- | --- |
-| Dữ liệu đầu vào | Dao động áp suất p′(t) tại nhiều giá trị Re | Chuỗi biến dao động η(t) tại nhiều hệ số cản α |
-| Thông tin biết trước | Lưu lượng khí/nhiên liệu, thông tin để tính Re, tần số lấy mẫu và thứ tự thay đổi điều kiện | Phương trình (1), các tham số mô hình, hệ số cản được điều khiển và điểm Hopf đã biết |
-| Điều không cần biết đầy đủ | Phương trình chi phối toàn bộ buồng đốt | Không phải bài toán khám phá phương trình: phương trình đã được chỉ định |
-| Đầu ra mô tả | Cấu trúc tái diễn, các thang thời gian chi phối và đại lượng định lượng theo Re | Các đại lượng định lượng theo α và quan hệ lũy thừa |
-| Đầu ra ước lượng | Tham số tới hạn được chọn bằng tiêu chí khớp | Tham số tới hạn ước lượng để đối chiếu với mốc Hopf |
-| Nhãn đối chiếu | Không có nhãn sự kiện để huấn luyện bộ phân loại hoặc một mốc phân nhánh thực nghiệm độc lập dùng để tính độ chính xác | Điểm phân nhánh đã biết dùng để kiểm chứng, không phải nhãn huấn luyện |
+| Thành phần                        | Thí nghiệm buồng đốt                                                                                                                            | Kiểm chứng bằng mô hình                                                                                |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Dữ liệu đầu vào                | Dao động áp suất p′(t) tại nhiều giá trị Re                                                                                                 | Chuỗi biến dao động η(t) tại nhiều hệ số cản α                                                   |
+| Thông tin biết trước            | Lưu lượng khí/nhiên liệu, thông tin để tính Re, tần số lấy mẫu và thứ tự thay đổi điều kiện                                    | Phương trình (1), các tham số mô hình, hệ số cản được điều khiển và điểm Hopf đã biết |
+| Điều không cần biết đầy đủ | Phương trình chi phối toàn bộ buồng đốt                                                                                                     | Không phải bài toán khám phá phương trình: phương trình đã được chỉ định                |
+| Đầu ra mô tả                    | Cấu trúc tái diễn, các thang thời gian chi phối và đại lượng định lượng theo Re                                                      | Các đại lượng định lượng theo α và quan hệ lũy thừa                                           |
+| Đầu ra ước lượng              | Tham số tới hạn được chọn bằng tiêu chí khớp                                                                                              | Tham số tới hạn ước lượng để đối chiếu với mốc Hopf                                           |
+| Nhãn đối chiếu                  | Không có nhãn sự kiện để huấn luyện bộ phân loại hoặc một mốc phân nhánh thực nghiệm độc lập dùng để tính độ chính xác | Điểm phân nhánh đã biết dùng để kiểm chứng, không phải nhãn huấn luyện                     |
 
 Nguồn bảng: Mục II.A–D, tr. 3–6; Mục III.B–C, tr. 8–12.
 
@@ -49,14 +49,14 @@ Giá trị tham chiếu có thể được tính khi đã đo tới điểm ứn
 
 Tác giả kế thừa phép nhúng trễ, biểu diễn tái diễn, các đại lượng định lượng, phân tích phổ liên xung và ý tưởng lũy thừa trong nghiên cứu trước. Tính mới cần tìm ở cách diễn giải và kết hợp chúng trong bài toán hiện tại. Đối chiếu dưới đây chỉ dựa vào những tài liệu được chính bài dẫn, không thay thế một tổng quan tài liệu có hệ thống. [Mục I, tr. 2–3; Mục IV, tr. 12]
 
-| Thành phần | Nguồn gốc mà bài báo nêu | Vai trò trong công trình này |
-| --- | --- | --- |
-| **Đồ thị tái diễn** (*recurrence plot*, RP), phép nhúng trễ và chuẩn Euclid | Eckmann và cộng sự, tài liệu 47; Cao, tài liệu 48; Fraser–Swinney, tài liệu 49 | Công cụ được kế thừa, không phải biểu diễn mới do bài phát minh |
-| **Phân tích định lượng tái diễn** (*recurrence quantification analysis*, RQA) và cách chọn ngưỡng | Phương trình (2)–(11); tài liệu 35, 50–56 | Dùng để đo sự tổ chức của các điểm tái diễn |
-| **Phổ liên xung** (*inter-spike spectrum*, ISS), biểu diễn các chu kỳ lặp của dãy đỉnh | Kraemer và cộng sự (2022), tài liệu 52; Phụ lục | Công cụ được kế thừa để làm rõ thang thời gian chi phối |
-| **Ngưng tụ phổ** (*spectral condensation*), năng lượng tập trung vào một dạng dao động chi phối | Pavithran và cộng sự (2020), tài liệu 32 | Cơ sở liên tưởng cho cách diễn giải; chưa chứng minh hai hiện tượng tương đương |
-| Quy luật lũy thừa của các đại lượng tái diễn | Afsar và cộng sự (2015), tài liệu 44, trong bối cảnh nhân đôi chu kỳ và biên hỗn loạn | Ý tưởng đã có tiền lệ, không thể coi mọi phép khớp RQA theo lũy thừa là mới |
-| Ngưng tụ tái diễn và chọn mốc tới hạn qua chất lượng khớp | Mục III.A–C và IV | Phần được phát triển trong bài: nối cách diễn giải động lực học với thủ tục chọn tham số, có minh họa thực nghiệm và mô phỏng |
+| Thành phần                                                                                                           | Nguồn gốc mà bài báo nêu                                                                       | Vai trò trong công trình này                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Đồ thị tái diễn** (*recurrence plot*, RP), phép nhúng trễ và chuẩn Euclid                          | Eckmann và cộng sự, tài liệu 47; Cao, tài liệu 48; Fraser–Swinney, tài liệu 49             | Công cụ được kế thừa, không phải biểu diễn mới do bài phát minh                                                                            |
+| **Phân tích định lượng tái diễn** (*recurrence quantification analysis*, RQA) và cách chọn ngưỡng | Phương trình (2)–(11); tài liệu 35, 50–56                                                     | Dùng để đo sự tổ chức của các điểm tái diễn                                                                                                 |
+| **Phổ liên xung** (*inter-spike spectrum*, ISS), biểu diễn các chu kỳ lặp của dãy đỉnh              | Kraemer và cộng sự (2022), tài liệu 52; Phụ lục                                               | Công cụ được kế thừa để làm rõ thang thời gian chi phối                                                                                     |
+| **Ngưng tụ phổ** (*spectral condensation*), năng lượng tập trung vào một dạng dao động chi phối   | Pavithran và cộng sự (2020), tài liệu 32                                                        | Cơ sở liên tưởng cho cách diễn giải; chưa chứng minh hai hiện tượng tương đương                                                        |
+| Quy luật lũy thừa của các đại lượng tái diễn                                                                | Afsar và cộng sự (2015), tài liệu 44, trong bối cảnh nhân đôi chu kỳ và biên hỗn loạn | Ý tưởng đã có tiền lệ, không thể coi mọi phép khớp RQA theo lũy thừa là mới                                                             |
+| Ngưng tụ tái diễn và chọn mốc tới hạn qua chất lượng khớp                                                 | Mục III.A–C và IV                                                                                 | Phần được phát triển trong bài: nối cách diễn giải động lực học với thủ tục chọn tham số, có minh họa thực nghiệm và mô phỏng |
 
 Nguồn: Mục I, tr. 2–3; Mục II.C–D, tr. 4–6; Mục IV, tr. 12; Phụ lục, tr. 13; danh mục tài liệu, tr. 13–14.
 
@@ -125,12 +125,12 @@ $$
 
 Khi tái triển khai, cần xác nhận cách chuẩn hóa trước hay sau khi loại các đoạn ngắn. RT ở đây là thời gian tái diễn, không phải thời gian hồi phục sau nhiễu loạn. [Mục II.D.2, tr. 6–7; Phương trình (10)–(11)]
 
-| Đại lượng | Cấu trúc được đo | Xu hướng thực nghiệm | Giới hạn diễn giải |
-| --- | --- | --- | --- |
-| DET và L | Các đường chéo | Tăng | Không tự chứng minh cơ chế nhân quả hoặc khả năng dự báo |
-| **Entropy độ dài đường chéo** (*diagonal line entropy*, Entr) | Phân bố độ dài đường chéo | Tăng ban đầu, sau đó giảm | Không thể gộp thành kết luận mọi loại entropy đều giảm |
-| **Tỷ phần đường thẳng đứng** (*laminarity*, LAM) và **thời gian lưu giữ** (*trapping time*, TT) | Các đường đen thẳng đứng | Giảm | Giảm lưu giữ cục bộ không đồng nghĩa giảm tính tuần hoàn |
-| RT và RTE | Các khoảng trắng thẳng đứng | Giảm | Khoảng trung bình ngắn hơn chưa đủ chứng minh toàn hệ chỉ còn một thang thời gian |
+| Đại lượng                                                                                                               | Cấu trúc được đo             | Xu hướng thực nghiệm        | Giới hạn diễn giải                                                                          |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------- |
+| DET và L                                                                                                                   | Các đường chéo                | Tăng                           | Không tự chứng minh cơ chế nhân quả hoặc khả năng dự báo                            |
+| **Entropy độ dài đường chéo** (*diagonal line entropy*, Entr)                                                | Phân bố độ dài đường chéo | Tăng ban đầu, sau đó giảm | Không thể gộp thành kết luận mọi loại entropy đều giảm                               |
+| **Tỷ phần đường thẳng đứng** (*laminarity*, LAM) và **thời gian lưu giữ** (*trapping time*, TT) | Các đường đen thẳng đứng   | Giảm                           | Giảm lưu giữ cục bộ không đồng nghĩa giảm tính tuần hoàn                           |
+| RT và RTE                                                                                                                  | Các khoảng trắng thẳng đứng  | Giảm                           | Khoảng trung bình ngắn hơn chưa đủ chứng minh toàn hệ chỉ còn một thang thời gian |
 
 Nguồn: Mục II.D, tr. 4–7; Phương trình (7)–(11); Hình 3(I-b–h), tr. 6; Mục III.B, tr. 8–9.
 
@@ -261,14 +261,14 @@ $$
 
 Đây là Phương trình (1); ξ là nhiễu, Γ là cường độ nhiễu và α là hệ số cản được thay đổi. [Mục II.B, tr. 3–4]
 
-| Tham số hoặc trường hợp | Giá trị bài báo nêu |
-| --- | --- |
-| Tần số góc ω | 2π × 120 rad/s |
-| Hệ số β | 50 rad/s |
-| Cường độ nhiễu Γ | 10 |
-| Hệ số cản α | Giảm từ 80 xuống 45 rad/s |
-| **Hopf dưới tới hạn** (*subcritical Hopf*) | K = 9; γ = 0.7 |
-| **Hopf trên tới hạn** (*supercritical Hopf*) | K = −9; γ = −0.7 |
+| Tham số hoặc trường hợp                            | Giá trị bài báo nêu     |
+| ------------------------------------------------------- | ---------------------------- |
+| Tần số góc ω                                        | 2π × 120 rad/s             |
+| Hệ số β                                              | 50 rad/s                     |
+| Cường độ nhiễu Γ                                  | 10                           |
+| Hệ số cản α                                         | Giảm từ 80 xuống 45 rad/s |
+| **Hopf dưới tới hạn** (*subcritical Hopf*)  | K = 9; γ = 0.7              |
+| **Hopf trên tới hạn** (*supercritical Hopf*) | K = −9; γ = −0.7          |
 
 Nguồn: Mục II.B, tr. 3–4; Phương trình (1). Giữ nguyên các dấu tham số theo PDF; bản phân tích chưa thực hiện mô phỏng để xác nhận hoặc sửa chúng.
 
@@ -290,16 +290,16 @@ Tác giả nói rõ mô hình được dùng để kiểm tra ý nghĩa của đ
 
 ### 5.3. Cách đánh giá và những chi tiết chưa được báo cáo
 
-| Hạng mục | Bài báo cho biết | Giới hạn cần giữ rõ |
-| --- | --- | --- |
-| Huấn luyện/kiểm tra | Không có quy trình học có giám sát | Không có đánh giá dự báo trước sự kiện trên tập kiểm tra tách riêng |
-| Mốc đối chiếu | So điểm được chọn với điểm Hopf đã biết | Thí nghiệm buồng đốt chưa có mốc phân nhánh độc lập để tính sai số ước lượng |
-| So sánh | So sánh cấu trúc, xu hướng và số mũ giữa thí nghiệm và hai trường hợp mô hình | Các giá trị căn trung bình bình phương, viết tắt RMS, là chỉ số biên độ để đối chiếu; chưa phải so sánh thuật toán đầy đủ |
-| Phương án đối chứng | Không báo cáo phép so sánh có hệ thống, thí nghiệm loại bỏ từng thành phần hoặc bộ tín hiệu thay thế/đối chứng không có chuyển tiếp | Chưa có bằng chứng về ưu thế tương đối hoặc tính đặc hiệu với hiện tượng tới hạn |
-| Độ bất định | Thanh sai số của số mũ và độ bất định của Re | Chưa rõ loại thanh sai số, mức bao phủ và phân bố sai số của điểm được chọn qua nhiều lần chạy |
-| Độ nhạy | Một cấu hình RR, cửa sổ và độ dài tối thiểu được nêu; mô hình có Γ bằng 10 | Chưa có khảo sát có hệ thống theo ngưỡng, chiều nhúng, độ trễ, cửa sổ hoặc cường độ nhiễu |
-| Mô phỏng | Có phương trình, tham số và khoảng thay đổi hệ số cản | Thiếu bộ giải, bước thời gian, thời lượng, cách bỏ quá độ, hạt giống ngẫu nhiên và số lần mô phỏng |
-| Dữ liệu/mã nguồn | Dữ liệu được cung cấp qua yêu cầu hợp lý tới tác giả liên hệ | PDF không dẫn kho mã nguồn hoặc đường tải dữ liệu công khai; chưa xác minh tài nguyên bên ngoài PDF |
+| Hạng mục                | Bài báo cho biết                                                                                                                                            | Giới hạn cần giữ rõ                                                                                                                                |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Huấn luyện/kiểm tra    | Không có quy trình học có giám sát                                                                                                                      | Không có đánh giá dự báo trước sự kiện trên tập kiểm tra tách riêng                                                                     |
+| Mốc đối chiếu         | So điểm được chọn với điểm Hopf đã biết                                                                                                            | Thí nghiệm buồng đốt chưa có mốc phân nhánh độc lập để tính sai số ước lượng                                                       |
+| So sánh                  | So sánh cấu trúc, xu hướng và số mũ giữa thí nghiệm và hai trường hợp mô hình                                                                 | Các giá trị căn trung bình bình phương, viết tắt RMS, là chỉ số biên độ để đối chiếu; chưa phải so sánh thuật toán đầy đủ |
+| Phương án đối chứng | Không báo cáo phép so sánh có hệ thống, thí nghiệm loại bỏ từng thành phần hoặc bộ tín hiệu thay thế/đối chứng không có chuyển tiếp | Chưa có bằng chứng về ưu thế tương đối hoặc tính đặc hiệu với hiện tượng tới hạn                                                  |
+| Độ bất định          | Thanh sai số của số mũ và độ bất định của Re                                                                                                        | Chưa rõ loại thanh sai số, mức bao phủ và phân bố sai số của điểm được chọn qua nhiều lần chạy                                      |
+| Độ nhạy                | Một cấu hình RR, cửa sổ và độ dài tối thiểu được nêu; mô hình có Γ bằng 10                                                                 | Chưa có khảo sát có hệ thống theo ngưỡng, chiều nhúng, độ trễ, cửa sổ hoặc cường độ nhiễu                                         |
+| Mô phỏng                | Có phương trình, tham số và khoảng thay đổi hệ số cản                                                                                              | Thiếu bộ giải, bước thời gian, thời lượng, cách bỏ quá độ, hạt giống ngẫu nhiên và số lần mô phỏng                               |
+| Dữ liệu/mã nguồn      | Dữ liệu được cung cấp qua yêu cầu hợp lý tới tác giả liên hệ                                                                                    | PDF không dẫn kho mã nguồn hoặc đường tải dữ liệu công khai; chưa xác minh tài nguyên bên ngoài PDF                                   |
 
 Nguồn: Mục II–III, tr. 3–12; Hình 3–9; phần khả dụng dữ liệu, tr. 12. Những điểm “chưa báo cáo” là đánh giá mức độ mô tả trong PDF, không phải kết quả kiểm tra mã nguồn hoặc một lần tái lập thất bại.
 
@@ -360,11 +360,11 @@ Dấu mũ ở đây chỉ ước lượng do bản phân tích dùng để phân
 Một số số mũ đọc trực tiếp từ phần số liệu kèm Hình 4, 6, 8:
 
 | Đại lượng | Thí nghiệm nhiệt âm | Hopf dưới tới hạn có nhiễu | Hopf trên tới hạn có nhiễu |
-| --- | ---: | ---: | ---: |
-| DET | 0.57 ± 0.05 | 0.44 ± 0.05 | 0.50 ± 0.05 |
-| L | 0.30 ± 0.91 | 0.09 ± 0.01 | 0.14 ± 0.02 |
-| TT | 0.25 ± 0.06 | 0.45 ± 0.04 | 0.43 ± 0.04 |
-| RT | 0.36 ± 0.03 | 0.56 ± 0.07 | 0.65 ± 0.07 |
+| ------------- | ----------------------: | -------------------------------: | ------------------------------: |
+| DET           |            0.57 ± 0.05 |                     0.44 ± 0.05 |                    0.50 ± 0.05 |
+| L             |            0.30 ± 0.91 |                     0.09 ± 0.01 |                    0.14 ± 0.02 |
+| TT            |            0.25 ± 0.06 |                     0.45 ± 0.04 |                    0.43 ± 0.04 |
+| RT            |            0.36 ± 0.03 |                     0.56 ± 0.07 |                    0.65 ± 0.07 |
 
 Giá trị và dấu ± giữ theo tác giả, không suy ra từ việc số hóa biểu đồ cột Hình 9. PDF chưa xác định đủ để gọi các khoảng này là khoảng tin cậy ở một mức bao phủ cụ thể. [Hình 4, 6, 8]
 
@@ -372,17 +372,17 @@ Giá trị và dấu ± giữ theo tác giả, không suy ra từ việc số h�
 
 ### 6.4. Mỗi hình kiểm tra điều gì và không chứng minh điều gì?
 
-| Hình | Nội dung và bằng chứng chính | Giới hạn |
-| --- | --- | --- |
-| Hình 1, tr. 3 | Sơ đồ thí nghiệm và vị trí đo áp suất | Không phải đánh giá hiệu năng hoặc tiêu chí tới hạn độc lập |
-| Hình 2, tr. 5 | Tín hiệu, RP, τ-RR, ISS qua hỗn loạn → gián đoạn → LCO | Không chứng minh quan hệ nhân quả, RR tăng hoặc dự báo trước sự kiện |
-| Hình 3, tr. 6 | Xu hướng RQA và quan hệ lũy thừa tại mốc được chọn | Biến đổi trước LCO không tương đương dự báo trước điểm tới hạn chưa biết |
-| Hình 4, tr. 7 | Số mũ và thanh sai số theo ứng viên Re | Không phải phân bố độ bất định của mốc được chọn; không phải mọi đại lượng đều đồng thuận rõ |
-| Hình 5, tr. 8 | Xu hướng và quan hệ lũy thừa của mô hình dưới tới hạn | Không có đánh giá độ chính xác theo nhiều hạt giống ngẫu nhiên hoặc mức nhiễu |
-| Hình 6, tr. 9 | Độ bất định phép khớp nhỏ nhất tại điểm Hopf trong trường hợp dưới tới hạn | Chưa kiểm tra tính đặc hiệu với hiện tượng tới hạn trên các trường hợp đối chứng |
-| Hình 7, tr. 10 | Chuyển tiếp dần và quan hệ lũy thừa của mô hình trên tới hạn | Không phải dữ liệu của một hệ thực nghiệm độc lập khác |
-| Hình 8, tr. 11 | Điểm được chọn khớp mốc Hopf trong trường hợp trên tới hạn | Chưa đánh giá thời gian báo trước hoặc tỷ lệ cảnh báo sai |
-| Hình 9, tr. 12 | So sánh số mũ giữa các hệ và trường hợp | Chưa xác lập số mũ hay lớp phổ quát; biểu đồ cột không thay thế kiểm định thống kê |
+| Hình           | Nội dung và bằng chứng chính                                                             | Giới hạn                                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Hình 1, tr. 3  | Sơ đồ thí nghiệm và vị trí đo áp suất                                              | Không phải đánh giá hiệu năng hoặc tiêu chí tới hạn độc lập                                               |
+| Hình 2, tr. 5  | Tín hiệu, RP, τ-RR, ISS qua hỗn loạn → gián đoạn → LCO                              | Không chứng minh quan hệ nhân quả, RR tăng hoặc dự báo trước sự kiện                                        |
+| Hình 3, tr. 6  | Xu hướng RQA và quan hệ lũy thừa tại mốc được chọn                                | Biến đổi trước LCO không tương đương dự báo trước điểm tới hạn chưa biết                            |
+| Hình 4, tr. 7  | Số mũ và thanh sai số theo ứng viên Re                                                  | Không phải phân bố độ bất định của mốc được chọn; không phải mọi đại lượng đều đồng thuận rõ |
+| Hình 5, tr. 8  | Xu hướng và quan hệ lũy thừa của mô hình dưới tới hạn                            | Không có đánh giá độ chính xác theo nhiều hạt giống ngẫu nhiên hoặc mức nhiễu                           |
+| Hình 6, tr. 9  | Độ bất định phép khớp nhỏ nhất tại điểm Hopf trong trường hợp dưới tới hạn | Chưa kiểm tra tính đặc hiệu với hiện tượng tới hạn trên các trường hợp đối chứng                     |
+| Hình 7, tr. 10 | Chuyển tiếp dần và quan hệ lũy thừa của mô hình trên tới hạn                     | Không phải dữ liệu của một hệ thực nghiệm độc lập khác                                                      |
+| Hình 8, tr. 11 | Điểm được chọn khớp mốc Hopf trong trường hợp trên tới hạn                      | Chưa đánh giá thời gian báo trước hoặc tỷ lệ cảnh báo sai                                                   |
+| Hình 9, tr. 12 | So sánh số mũ giữa các hệ và trường hợp                                             | Chưa xác lập số mũ hay lớp phổ quát; biểu đồ cột không thay thế kiểm định thống kê                    |
 
 ## 7. Đóng góp thực sự và các tình huống có thể làm phương pháp thất bại
 
@@ -420,19 +420,19 @@ Không mặc định biến cố sinh lý là phân nhánh, chuyển tiếp tớ
 
 ## 9. Hồ sơ phương pháp (Methodological Fingerprint)
 
-| Trường | Đặc trưng của bài báo |
-| --- | --- |
-| Bài toán (Problem) | Mô tả chuyển từ hỗn loạn sang tuần hoàn qua gián đoạn và định vị tham số tới hạn trong hệ có nhiễu. [Mục I, III.A] |
-| Đầu vào (Input) | Nhiều chuỗi một chiều gắn với Re hoặc α đã biết; không chỉ một chuỗi chưa gắn nhãn có tham số điều khiển hoàn toàn không biết. [Mục II.A–C, III.B] |
-| Thông tin biết trước (Known information) | Tham số và thứ tự thay đổi, cách lấy mẫu; mô hình còn có phương trình và mốc Hopf. Thí nghiệm không cần đầy đủ phương trình chi phối. [Mục II] |
-| Đầu ra (Output) | RP, τ-RR, ISS, xu hướng RQA; số mũ và điểm tham chiếu tới hạn được chọn. [Mục II.C–D, III] |
-| Phương án đối chiếu (Existing baseline) | Có RMS biên độ trong các hình, chưa có so sánh có hệ thống với phương sai, tự tương quan hoặc thuật toán định vị khác. [Hình 3–8] |
-| Thành phần mới (New component) | Khái niệm ngưng tụ tái diễn và cách dùng chất lượng khớp để chọn tham số; các công cụ đo và ý tưởng lũy thừa có tiền lệ. [Mục I, III–IV] |
-| Giả định (Assumptions) | Dữ liệu đại diện cho từng điều kiện, phép tái tạo và ngưỡng so sánh được, đại lượng quan sát phản ánh động lực học, tiêu chí lũy thừa có ý nghĩa. [Mục II.C, III.A–B] |
-| Kiểm chứng (Validation) | Một thí nghiệm buồng đốt và hai trường hợp Hopf có nhiễu trong cùng họ mô hình; đối chiếu mốc Hopf của hệ xác định khi bỏ nhiễu. [Phương trình (1); Mục II.A–B, III.C] |
-| Kết quả chính (Main finding) | Mốc thực nghiệm gần 2.96 × 10⁴ vẫn gián đoạn; hai mô hình chọn hệ số cản 50, khớp mốc Hopf. [Hình 3–4, 6, 8] |
-| Câu hỏi còn mở (Unresolved questions) | Hệ số tỷ lệ/hàm mục tiêu, sai số dùng chung tham chiếu, bất nhất thanh sai số, tính đặc hiệu trên đối chứng, độ vững và khả năng dự báo trước sự kiện. [Mục III.B–IV; Hình 4, 9] |
-| Khả năng tái lập (Reproduction feasibility) | Có thể tái triển khai ý tưởng; tái tạo chính xác cần dữ liệu và chi tiết về phép nhúng, cửa sổ, hồi quy, mô phỏng, ISS. [Phương pháp, Phụ lục, phần khả dụng dữ liệu] |
+| Trường                                        | Đặc trưng của bài báo                                                                                                                                                                                          |
+| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bài toán (Problem)                            | Mô tả chuyển từ hỗn loạn sang tuần hoàn qua gián đoạn và định vị tham số tới hạn trong hệ có nhiễu. [Mục I, III.A]                                                                             |
+| Đầu vào (Input)                              | Nhiều chuỗi một chiều gắn với Re hoặc α đã biết; không chỉ một chuỗi chưa gắn nhãn có tham số điều khiển hoàn toàn không biết. [Mục II.A–C, III.B]                                      |
+| Thông tin biết trước (Known information)    | Tham số và thứ tự thay đổi, cách lấy mẫu; mô hình còn có phương trình và mốc Hopf. Thí nghiệm không cần đầy đủ phương trình chi phối. [Mục II]                                        |
+| Đầu ra (Output)                               | RP, τ-RR, ISS, xu hướng RQA; số mũ và điểm tham chiếu tới hạn được chọn. [Mục II.C–D, III]                                                                                                          |
+| Phương án đối chiếu (Existing baseline)   | Có RMS biên độ trong các hình, chưa có so sánh có hệ thống với phương sai, tự tương quan hoặc thuật toán định vị khác. [Hình 3–8]                                                         |
+| Thành phần mới (New component)               | Khái niệm ngưng tụ tái diễn và cách dùng chất lượng khớp để chọn tham số; các công cụ đo và ý tưởng lũy thừa có tiền lệ. [Mục I, III–IV]                                             |
+| Giả định (Assumptions)                       | Dữ liệu đại diện cho từng điều kiện, phép tái tạo và ngưỡng so sánh được, đại lượng quan sát phản ánh động lực học, tiêu chí lũy thừa có ý nghĩa. [Mục II.C, III.A–B]         |
+| Kiểm chứng (Validation)                       | Một thí nghiệm buồng đốt và hai trường hợp Hopf có nhiễu trong cùng họ mô hình; đối chiếu mốc Hopf của hệ xác định khi bỏ nhiễu. [Phương trình (1); Mục II.A–B, III.C]               |
+| Kết quả chính (Main finding)                 | Mốc thực nghiệm gần 2.96 × 10⁴ vẫn gián đoạn; hai mô hình chọn hệ số cản 50, khớp mốc Hopf. [Hình 3–4, 6, 8]                                                                                     |
+| Câu hỏi còn mở (Unresolved questions)       | Hệ số tỷ lệ/hàm mục tiêu, sai số dùng chung tham chiếu, bất nhất thanh sai số, tính đặc hiệu trên đối chứng, độ vững và khả năng dự báo trước sự kiện. [Mục III.B–IV; Hình 4, 9] |
+| Khả năng tái lập (Reproduction feasibility) | Có thể tái triển khai ý tưởng; tái tạo chính xác cần dữ liệu và chi tiết về phép nhúng, cửa sổ, hồi quy, mô phỏng, ISS. [Phương pháp, Phụ lục, phần khả dụng dữ liệu]              |
 
 ## 10. Quyết định tái lập và tài liệu đọc tiếp
 
