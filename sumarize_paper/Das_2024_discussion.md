@@ -61,14 +61,14 @@ Bài Das 2024 hỏi cách phân biệt hỗn loạn có những đỉnh lớn hi
 
 ### Methodological Fingerprint
 
-| Trường | Hồ sơ phương pháp |
-| --- | --- |
-| **Input — Đầu vào** | Dãy biên độ cực trị tại từng điều kiện. |
+| Trường                                                | Hồ sơ phương pháp                                                                      |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| **Input — Đầu vào**                           | Dãy biên độ cực trị tại từng điều kiện.                                          |
 | **Known information — Thông tin biết trước** | Biến quan sát, hướng cực trị, m; tham số điều khiển khi khảo sát chuyển tiếp. |
-| **Output — Đầu ra** | S, D, C và đường C theo tham số. |
-| **Core method — Phương pháp cốt lõi** | Phân bố biên độ; tích entropy chuẩn hóa và độ lệch khỏi phân bố đều. |
-| **Novel component — Thành phần mới** | Khảo sát và diễn giải chỉ số kế thừa cho chế độ có biến cố cực đoan. |
-| **Evidence — Bằng chứng** | Ba mô hình, hai cơ chế; kiểm tra bốn số khoảng chia. |
-| **Main assumption — Giả định chính** | Cực trị đủ đại diện biến cố hiếm; trích xuất và chia khoảng nhất quán. |
+| **Output — Đầu ra**                            | S, D, C và đường C theo tham số.                                                       |
+| **Core method — Phương pháp cốt lõi**       | Phân bố biên độ; tích entropy chuẩn hóa và độ lệch khỏi phân bố đều.       |
+| **Novel component — Thành phần mới**          | Khảo sát và diễn giải chỉ số kế thừa cho chế độ có biến cố cực đoan.       |
+| **Evidence — Bằng chứng**                      | Ba mô hình, hai cơ chế; kiểm tra bốn số khoảng chia.                                |
+| **Main assumption — Giả định chính**         | Cực trị đủ đại diện biến cố hiếm; trích xuất và chia khoảng nhất quán.      |
 
 (Nguồn hồ sơ: Sec. II–III; Fig. 1–6.)
