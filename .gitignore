@@ -35,6 +35,6 @@ Thumbs.db
 !/results/README.md
 
 # Ignore all files in the project's paper directory
-/paper/
+
 
 # Keep notes, source and notebooks versionable.
