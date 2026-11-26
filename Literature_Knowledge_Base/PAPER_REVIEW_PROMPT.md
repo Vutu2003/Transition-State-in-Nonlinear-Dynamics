@@ -14,10 +14,11 @@ Thư mục chứa tài liệu này là gốc của knowledge base. Thư mục ch
 Literature_Knowledge_Base/
 ├── PAPER_REVIEW_PROMPT.md
 ├── Review_Articles/
-└── Original_Research_Articles/
+├── Original_Research_Articles/
+└── Biomedical_Articles/
 ```
 
-Giữ nguyên PDF gốc và các hồ sơ ngoài phạm vi yêu cầu. Dùng hai thư mục article ở trên cho bản ghi chính thức và tạo thư mục còn thiếu khi cần. Phần tra cứu, kiểm tra hoặc trích xuất tạm thời thuộc phiên làm việc. Chỉ lưu hồ sơ được yêu cầu trong knowledge base.
+Giữ nguyên PDF gốc và các hồ sơ ngoài phạm vi yêu cầu. Dùng ba thư mục article ở trên cho bản ghi chính thức và tạo thư mục còn thiếu khi cần. Phần tra cứu, kiểm tra hoặc trích xuất tạm thời thuộc phiên làm việc. Chỉ lưu hồ sơ được yêu cầu trong knowledge base.
 
 ## 2. Workflow cho mỗi paper
 
@@ -25,7 +26,7 @@ Giữ nguyên PDF gốc và các hồ sơ ngoài phạm vi yêu cầu. Dùng hai
 2. Đọc full text trong phạm vi truy cập. Kiểm tra nội dung lý thuyết, Methods, Results, Discussion, hình, bảng, phụ lục và các reference liên quan đến claim chính.
 3. Xác minh bibliographic metadata từ PDF. Dùng nguồn chính thức như trang publisher, DOI hoặc nơi lưu trữ chính thức khi cần xác minh trường còn thiếu hay mâu thuẫn. Ghi rõ nguồn và phiên bản nếu điều đó ảnh hưởng cách đọc.
 4. Phân loại article type theo Mục 3. Ghi lý do, độ chắc chắn và thư mục đích. Với hybrid, xác định đóng góp chính và phần original evidence.
-5. Kiểm tra cả hai thư mục để tìm bản ghi hiện có theo Mục 10. Xác định một đường dẫn lưu trước khi soạn.
+5. Kiểm tra cả ba thư mục để tìm bản ghi hiện có theo Mục 10. Xác định một đường dẫn lưu trước khi soạn.
 6. Dùng cấu trúc phù hợp ở Mục 5 hoặc Mục 6. Trích xuất theoretical knowledge, methodology, results, evidence, limitations và tài liệu cần đọc tiếp. Dùng Mục 7 cho bảng dữ liệu chung và Mục 8 để kiểm tra mọi claim quan trọng.
 7. Tích hợp ghi chú cá nhân đã được cung cấp theo Mục 11. Khi cập nhật, đối chiếu nội dung mới với hồ sơ cũ, bảo toàn các phần còn giá trị và ghi Revision History.
 8. Kiểm tra chất lượng theo Mục 12. Lưu đúng một hồ sơ UTF-8 hoặc cập nhật hồ sơ hiện có. Kiểm tra lại đường dẫn và nội dung đã lưu rồi báo cáo theo Mục 13.
@@ -36,7 +37,7 @@ Nếu chỉ truy cập được abstract hoặc một phần PDF, ghi phạm vi 
 
 Dùng nhãn do publisher công bố nếu có, cùng với objective, cấu trúc, methodology, tính chất đóng góp và nguồn gốc của evidence trong full text. Xác định câu hỏi chính được trả lời bằng cách tổng hợp nghiên cứu đã có, bằng proof hoặc dữ liệu mới, hay bằng cả hai. Title và abstract chỉ giúp định hướng đọc.
 
-| Article type | Bằng chứng để phân loại | Thư mục đích |
+| Article type | Bằng chứng để phân loại | Thư mục đích mặc định |
 |---|---|---|
 | `review` | Đóng góp chính là tổng hợp, hệ thống hóa, đánh giá hoặc giải thích kiến thức đã có. Evidence chủ yếu đến từ các nghiên cứu được trích dẫn. Bao gồm narrative, systematic, scoping và tutorial review, scientific overview và review-oriented perspective. | `Review_Articles/` |
 | `original_research` | Đóng góp chính là kết quả nguyên gốc như mathematical framework, proof, analytical result, mô hình mới hoặc sửa đổi có mục đích, computational method, numerical experiment, thí nghiệm, phân tích dữ liệu mới hoặc application-driven modeling. Một paper có thể dùng dữ liệu hoặc mô hình sẵn có để tạo ra kết quả original. | `Original_Research_Articles/` |
@@ -45,6 +46,12 @@ Dùng nhãn do publisher công bố nếu có, cùng với objective, cấu trú
 Đối với hybrid, dùng cấu trúc của nhóm đóng góp chính và bổ sung các tiểu mục thích hợp của nhóm còn lại. Ghi rõ phần nào là literature synthesis, phần nào tạo original evidence và mục nào của paper hỗ trợ lựa chọn. Lưu chung trong một hồ sơ Markdown.
 
 Khi phân loại chưa chắc chắn, dùng cách phân loại được full text hỗ trợ tốt nhất. Ghi `classification_confidence` và chỉ rõ căn cứ, thông tin còn thiếu hoặc lý do publisher label khác knowledge-base classification. Chỉ điền `publisher_article_type` khi xác minh được nhãn chính thức.
+
+### Lưu bài y sinh
+
+Dùng `Biomedical_Articles/` cho các bài có trọng tâm là câu hỏi hoặc ứng dụng y sinh, chẳng hạn sinh lý học, nghiên cứu lâm sàng hoặc phân tích tín hiệu y sinh. Xác định trọng tâm từ mục tiêu, đối tượng nghiên cứu và bằng chứng chính. Khi y sinh chỉ xuất hiện như một ví dụ hoặc hướng ứng dụng được đề cập, dùng thư mục mặc định theo bảng trên.
+
+Quy tắc này áp dụng cho cả review, original research và hybrid. Giữ giá trị `article_type` theo loại đóng góp, dùng cấu trúc nội dung tương ứng và ghi lĩnh vực cụ thể trong `application_domains`. Với bài hybrid về y sinh, đóng góp chính quyết định cấu trúc nội dung. Chỉ lưu một bản Markdown cho mỗi bài.
 
 ## 4. YAML Front Matter chung
 
@@ -421,7 +428,7 @@ Chọn trọng tâm phù hợp với nội dung thực tế của paper.
 
 Đặt tên `FirstAuthor_Year_ShortTitle.md`. Ưu tiên tên ngắn, có thể đọc, bỏ ký tự không hợp lệ và độc lập với thứ tự đọc. Dùng short title cụ thể để phân biệt bài cùng tác giả đầu và năm. Có thể thêm một hậu tố dựa trên title nếu đích đã được một paper khác sử dụng. Giữ citation key ổn định qua các lần cập nhật nếu có thể.
 
-Trước khi tạo, quét mọi hồ sơ Markdown trong cả hai thư mục. So sánh DOI đã chuẩn hóa bằng cách bỏ tiền tố `doi:` hoặc URL DOI, bỏ khoảng trắng thừa và bỏ qua khác biệt hoa thường. Sau đó so sánh exact title đã chuẩn hóa khoảng trắng, dấu câu và hoa thường. Đối chiếu authors và publication year để xác nhận cùng một công trình. Với khác biệt do online-first, preprint hoặc bản xuất bản, kiểm tra quan hệ phiên bản từ nguồn trước khi quyết định. Tên file hoặc độ giống title chỉ là dấu hiệu tìm ứng viên. Khi hai DOI đã xác minh khác nhau, cần căn cứ về quan hệ phiên bản trước khi gộp.
+Trước khi tạo, quét mọi hồ sơ Markdown trong `Review_Articles/`, `Original_Research_Articles/` và `Biomedical_Articles/`. So sánh DOI đã chuẩn hóa bằng cách bỏ tiền tố `doi:` hoặc URL DOI, bỏ khoảng trắng thừa và bỏ qua khác biệt hoa thường. Sau đó so sánh exact title đã chuẩn hóa khoảng trắng, dấu câu và hoa thường. Đối chiếu authors và publication year để xác nhận cùng một công trình. Với khác biệt do online-first, preprint hoặc bản xuất bản, kiểm tra quan hệ phiên bản từ nguồn trước khi quyết định. Tên file hoặc độ giống title chỉ là dấu hiệu tìm ứng viên. Khi hai DOI đã xác minh khác nhau, cần căn cứ về quan hệ phiên bản trước khi gộp.
 
 - **Paper mới** — Tạo đúng một file trong thư mục đích và ghi lần tạo ở Revision History.
 - **Paper đã lưu** — Mở file hiện có, thêm hoặc sửa phần cần thiết, bảo toàn personal notes, manual edits và tham chiếu nguồn chính xác. Chỉ sửa lỗi factual có bằng chứng và ghi thay đổi. Giữ lại các thông tin có giá trị từ phiên bản trước.
@@ -438,13 +445,13 @@ Nếu đầu vào chỉ có PDF, thực hiện scientific extraction, giải th�
 
 ## 12. Kiểm tra trước khi lưu
 
-- [ ] Article type, primary contribution, lý do phân loại và thư mục đích phù hợp với full text.
+- [ ] Article type, primary contribution và lý do phân loại phù hợp với full text. Thư mục đích tuân theo quy tắc bài y sinh hoặc thư mục mặc định tương ứng.
 - [ ] Bibliographic metadata đã được xác minh trong phạm vi tiếp cận. Trường thiếu có giá trị rỗng, phạm vi đọc và các điểm cần xác minh đã được ghi.
 - [ ] YAML hợp lệ, đủ trường và đúng controlled vocabulary. File dùng UTF-8, đúng main section headings và có bảng extraction chung đầy đủ.
 - [ ] Claim chính có vị trí nguồn. Equations, dấu, số mũ, variables, số liệu, units, điều kiện, hình và bảng đã được đối chiếu.
 - [ ] Proof, simulation, experiment, observation, statistical inference và hypothesis được nhận dạng đúng. Model fit, mechanism inference, detection và prediction được diễn giải theo evidence.
 - [ ] Original evidence, secondary evidence, nhận định tác giả, AI interpretation và personal notes có nguồn gốc rõ ràng. Research gap và tình trạng đọc hoặc xác nhận cá nhân phản ánh đúng những gì đã biết.
-- [ ] Đã kiểm tra trùng trong cả hai thư mục. Đã bảo toàn existing notes và manual edits, lưu một hồ sơ cho paper ở đúng thư mục và ghi Revision History.
+- [ ] Đã kiểm tra trùng trong cả ba thư mục. Đã bảo toàn existing notes và manual edits, lưu một hồ sơ cho paper ở đúng thư mục và ghi Revision History.
 - [ ] Đã đọc lại file sau khi lưu. Mọi hạn chế nguồn, mục cần kiểm tra thêm hoặc xung đột còn lại đều được nêu trong hồ sơ và báo cáo.
 
 ## 13. Báo cáo sau mỗi lần xử lý
